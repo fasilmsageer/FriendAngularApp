@@ -3,14 +3,33 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AddFriendComponent } from './add-friend/add-friend.component';
+import { ViewAllComponent } from './view-all/view-all.component';
+import { RouterComponent } from './router/router.component';
+import { RouterModule } from '@angular/router';
+
+const myRoute=[
+  {
+    path:"",
+    component:AddFriendComponent
+  },
+  {
+    path:"view",
+    component:ViewAllComponent
+  }
+]
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AddFriendComponent,
+    ViewAllComponent,
+    RouterComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(myRoute)
   ],
   providers: [],
   bootstrap: [AppComponent]
