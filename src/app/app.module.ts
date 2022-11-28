@@ -17,6 +17,10 @@ const myRoute=[
   {
     path:"view",
     component:ViewAllComponent
+  },
+  {
+    path:"search",
+    component:SearchfriendComponent
   }
 ]
 
